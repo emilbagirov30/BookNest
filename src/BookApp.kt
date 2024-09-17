@@ -30,7 +30,11 @@ class BookApp : Application() {
             output.text = "Все книги:\n" + books.joinToString("\n")
         }
 
-
+        filterBooks.setOnAction {
+            val year =showInputDialog("Введите год для фильтрации:").toIntOrNull() ?: 0
+            val filteredBooks = filterBooksByYear(books, year)
+            output.text = "Книги, опубликованные после $year:\n" + filteredBooks.joinToString("\n")
+        }
 
     }
 
@@ -43,4 +47,4 @@ class BookApp : Application() {
         return result.orElse("")
     }
 }
-}
+
