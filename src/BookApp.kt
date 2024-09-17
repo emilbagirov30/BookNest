@@ -39,6 +39,10 @@ class BookApp : Application() {
             val sortedBooks = sortBooksByTitle(books)
             output.text = "Отсортированный список книг:\n" + sortedBooks.joinToString("\n")
         }
+        root.children.addAll(addBook, showBooks, filterBooks,  sortBooks, output)
+        primaryStage.title = "BookNest"
+        primaryStage.scene = scene
+        primaryStage.show()
     }
 
 
