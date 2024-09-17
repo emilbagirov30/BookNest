@@ -1,6 +1,7 @@
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.control.Button
+import javafx.scene.control.TextArea
 import javafx.scene.layout.VBox
 import javafx.stage.Stage
 
@@ -14,6 +15,10 @@ class BookApp : Application() {
         val showBooks = Button("Показать все книги")
         val filterBooks = Button("Фильтрация книг по году")
         val sortBooks = Button("Сортировка по названию")
+
+        val output = TextArea()
+        output.isEditable = false
+
     }
 
 }
