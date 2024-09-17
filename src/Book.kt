@@ -1,5 +1,5 @@
 private var idCounter = 0
-data class Book (val id:Int,
+private data class Book (val id:Int,
                  val title:String,
                  val author:String,
                  val year:Int)
@@ -18,6 +18,10 @@ private fun createBookList():List<Book> {
     )
 }
 
-fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
+private fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
     return books.filter { it.year > year }
+}
+
+private fun sortBooksByTitle(books: List<Book>): List<Book> {
+    return books.sortedBy { it.title }
 }
