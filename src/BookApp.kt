@@ -35,7 +35,10 @@ class BookApp : Application() {
             val filteredBooks = filterBooksByYear(books, year)
             output.text = "Книги, опубликованные после $year:\n" + filteredBooks.joinToString("\n")
         }
-
+        sortBooks.setOnAction {
+            val sortedBooks = sortBooksByTitle(books)
+            output.text = "Отсортированный список книг:\n" + sortedBooks.joinToString("\n")
+        }
     }
 
 
