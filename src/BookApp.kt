@@ -25,6 +25,13 @@ class BookApp : Application() {
             if (title.isNotEmpty() && author.isNotEmpty())
                 books = books + createBook(title, author, year)
         }
+
+        showBooks.setOnAction {
+            output.text = "Все книги:\n" + books.joinToString("\n")
+        }
+
+
+
     }
 
 
