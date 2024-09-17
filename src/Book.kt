@@ -25,3 +25,10 @@ private fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
 private fun sortBooksByTitle(books: List<Book>): List<Book> {
     return books.sortedBy { it.title }
 }
+
+fun main() {
+    val books = createBookList()
+    println("Все книги:")
+    books.forEach { println(it) }
+
+}
