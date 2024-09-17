@@ -18,7 +18,13 @@ class BookApp : Application() {
         val output = TextArea()
         output.isEditable = false
 
-
+        addBook.setOnAction {
+            val title = showInputDialog("Введите название книги:")
+            val author =showInputDialog("Введите автора:")
+            val year = showInputDialog("Введите год издания:").toIntOrNull() ?: 0
+            if (title.isNotEmpty() && author.isNotEmpty())
+                books = books + createBook(title, author, year)
+        }
     }
 
 
