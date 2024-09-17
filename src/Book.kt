@@ -38,4 +38,8 @@ fun main() {
     val filteredBooksByYear = filterBooksByYear(books, 2000)
     println("\nКниги, опубликованные после 2000 года: ")
     filteredBooksByYear.forEach { println(it) }
+
+    val sortedBooksByTitle = sortBooksByTitle(books)
+    println("\nОтсортированный список книг: ")
+    sortedBooksByTitle.forEach { println(it) }
 }
