@@ -7,7 +7,8 @@ import javafx.stage.Stage
 class BookApp : Application() {
     private var books = createBookList()
     override fun start(primaryStage: Stage) {
-        val root = VBox()
+        val root = VBox(10.0)
+        root.alignment = javafx.geometry.Pos.CENTER
         val scene = Scene(root, 600.0, 400.0)
 
         val addBook = Button("Добавить книгу")
