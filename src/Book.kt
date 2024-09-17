@@ -35,4 +35,7 @@ fun main() {
     println("Все книги:")
     books.forEach { println(it) }
 
+    val filteredBooksByYear = filterBooksByYear(books, 2000)
+    println("\nКниги, опубликованные после 2000 года: ")
+    filteredBooksByYear.forEach { println(it) }
 }
