@@ -17,3 +17,7 @@ private fun createBookList():List<Book> {
         createBook("Гарри Поттер и Тайная Комната", "Дж.К. Роулинг", 1998)
     )
 }
+
+fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
+    return books.filter { it.year > year }
+}
