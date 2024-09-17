@@ -1,5 +1,5 @@
-private var idCounter = 0
-private data class Book (val id:Int,
+var idCounter = 0
+data class Book (val id:Int,
                  val title:String,
                  val author:String,
                  val year:Int){
@@ -8,11 +8,11 @@ private data class Book (val id:Int,
     }
 }
 
-private fun createBook(title: String, author: String, year: Int): Book {
+fun createBook(title: String, author: String, year: Int): Book {
     return Book(++idCounter, title, author, year)
 }
 
-private fun createBookList():List<Book> {
+fun createBookList():List<Book> {
     return listOf(
         createBook("Котлин в действии", "Дмитрий Жемеров", 2017),
         createBook("Java: Эффективное программирование", "Джошуа Блох", 2008),
@@ -22,11 +22,11 @@ private fun createBookList():List<Book> {
     )
 }
 
-private fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
+fun filterBooksByYear(books: List<Book>, year: Int): List<Book> {
     return books.filter { it.year > year }
 }
 
-private fun sortBooksByTitle(books: List<Book>): List<Book> {
+fun sortBooksByTitle(books: List<Book>): List<Book> {
     return books.sortedBy { it.title }
 }
 
@@ -42,5 +42,7 @@ fun main() {
     val sortedBooksByTitle = sortBooksByTitle(books)
     println("\nОтсортированный список книг: ")
     sortedBooksByTitle.forEach { println(it) }
+
+
 }
 
