@@ -1,7 +1,6 @@
 import javafx.application.Application
 import javafx.scene.Scene
-import javafx.scene.control.Button
-import javafx.scene.control.TextArea
+import javafx.scene.control.*
 import javafx.scene.layout.VBox
 import javafx.stage.Stage
 
@@ -19,6 +18,16 @@ class BookApp : Application() {
         val output = TextArea()
         output.isEditable = false
 
+
     }
 
+
+    private fun showInputDialog(dialogText: String): String {
+        val inputDialog = TextInputDialog()
+        inputDialog.title = "Введите данные"
+        inputDialog.contentText = dialogText
+        val result = inputDialog.showAndWait()
+        return result.orElse("")
+    }
+}
 }
