@@ -2,7 +2,11 @@ private var idCounter = 0
 private data class Book (val id:Int,
                  val title:String,
                  val author:String,
-                 val year:Int)
+                 val year:Int){
+    override fun toString(): String {
+        return "$id. \"$title\", $author, $year"
+    }
+}
 
 private fun createBook(title: String, author: String, year: Int): Book {
     return Book(++idCounter, title, author, year)
