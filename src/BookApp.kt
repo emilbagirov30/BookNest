@@ -53,5 +53,9 @@ class BookApp : Application() {
         val result = inputDialog.showAndWait()
         return result.orElse("")
     }
+
+}
+fun main() {
+    Application.launch(BookApp::class.java)
 }
 
